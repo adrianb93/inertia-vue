@@ -34,7 +34,7 @@ export default {
       resolveComponent: this.resolveComponent,
       updatePage: (component, props, { preserveState }) => {
         this.component = component
-        this.props = this.transformProps(props)
+        this.props = this.transformProps(props, component)
         this.key = preserveState ? this.key : Date.now()
       },
     })
